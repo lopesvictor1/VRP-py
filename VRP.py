@@ -5,6 +5,7 @@ from operator import itemgetter
 import numpy
 import itertools
 import copy
+import os
 
 
 #Initialize a matrix (list of lists) with some initial number
@@ -222,7 +223,7 @@ if __name__ == '__main__':
     
     
     #Reading Document
-    with open(filename, 'r') as f:
+    with open(os.getcwd() + '\instances\\' + filename, 'r') as f:
         reader = csv.reader(f, delimiter=' ', skipinitialspace=True)
         
         row1 = next(reader)                                                                                                                     #Row 1 has the number of clients and the truck capacity
